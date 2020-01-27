@@ -51,7 +51,8 @@
             {
               "name": "ipconfig1",
               "properties": {
-                "privateIPAllocationMethod": "Dynamic",
+                "privateIPAllocationMethod": "Static",
+                "privateIPAddress": "192.168.1.101",
                 // "publicIPAddress": {
                 //   "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
                 // },
