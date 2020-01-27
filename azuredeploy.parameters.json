@@ -3,41 +3,41 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "networkSecurityGroupName": {
-        "value": ""
+        "value": "freelancer-nsg"
      },
       "existingDataFactoryName": {
-        "value":"GET-PREREQ-dataFactoryName"
+        "value":"freelancer"
       },
       "existingDataFactoryResourceGroup": {
-        "value":"GET-PREREQ-resourceGroupName"
+        "value":"East US"
       },
       "existingDataFactoryVersion": {
-        "value":"V1"
+        "value":"V2"
       },
       "IntegrationRuntimeName": {
-        "value":"GEN-UNIQUE"
+        "value":"AutoResolveIntegrationRuntime"
       },
       "NodeCount":{
         "value": 1
       },
       "adminUserName": {
-        "value": "GEN-UNIQUE"
+        "value": "llazar"
       },
       "adminPassword": {
-        "value": "GEN-PASSWORD"
+        "value": "Laerti@2020"
       },
       "existingVirtualNetworkName":{
-        "value": "vnet-01"
+        "value": "test-vnet"
       },
       "existingVnetLocation":
       {
-        "value": "West US"
+        "value": "East US 2"
       },
       "existingVnetResourceGroupName":{
-        "value": "GET-PREREQ-resourceGroupName"
+        "value": "freelancer-rg"
       },
       "existingSubnetInYourVnet": {
-        "value": "subnet01"
+        "value": "freelancer-vnet"
       }
     }
   }

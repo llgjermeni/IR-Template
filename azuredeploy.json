@@ -79,21 +79,21 @@
       "metadata": {
         "description": "Name of the subnet in the virtual network you want to use"
       }
-    },
-    "_artifactsLocation": {
-      "type": "string",
-      "metadata": {
-        "description": "The base URI where artifacts required by this template are located."
-      },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vms-with-selfhost-integration-runtime/"
-    },
-    "_artifactsLocationSasToken": {
-      "type": "securestring",
-      "metadata": {
-        "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
-      },
-      "defaultValue": ""
     }
+    // "_artifactsLocation": {
+    //   "type": "string",
+    //   "metadata": {
+    //     "description": "The base URI where artifacts required by this template are located."
+    //   },
+    //   "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vms-with-selfhost-integration-runtime/"
+    // },
+    // "_artifactsLocationSasToken": {
+    //   "type": "securestring",
+    //   "metadata": {
+    //     "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
+    //   },
+    //   "defaultValue": ""
+    // }
   },
   "variables": {
     "delimiters": [
@@ -103,11 +103,11 @@
     "prefix": "[split(parameters('IntegrationRuntimeName'), variables('delimiters'))[0]]",
     "storageAccountName": "[take(concat(toLower(variables('prefix')), uniquestring(resourceGroup().id, parameters('IntegrationRuntimeName'))), 24)]",
     // "networkSecurityGroupName": "[concat(parameters('IntegrationRuntimeName'), parameters('networkSecurityGroupId'))]",
-    "vmTemplateLink": "[concat(parameters('_artifactsLocation'), 'nested/VMtemplate.json',parameters('_artifactsLocationSasToken'))]",
-    "irInstallTemplateLink": "[concat(parameters('_artifactsLocation'), 'nested/IRInstall.json',parameters('_artifactsLocationSasToken'))]",
-    "IRtemplateLink": "[concat(parameters('_artifactsLocation'), 'nested/', parameters('existingDataFactoryVersion'), 'IRtemplate.json',parameters('_artifactsLocationSasToken'))]",
+    "vmTemplateLink": "https://raw.githubusercontent.com/llgjermeni/IR-Template/master/nested/VMtemplate.json",
+    "irInstallTemplateLink": "https://raw.githubusercontent.com/llgjermeni/IR-Template/master/nested/IRInstall.json",
+    "IRtemplateLink": "[concat('https://raw.githubusercontent.com/llgjermeni/IR-Template/master/nested/', parameters('existingDataFactoryVersion'), 'IRtemplate.json')]",
     "subnetId": "[resourceId(parameters('existingVnetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingSubnetInYourVnet'))]",
-    "scriptURL": "[concat(parameters('_artifactsLocation'), 'scripts/gatewayInstall.ps1',parameters('_artifactsLocationSasToken'))]"
+    "scriptURL": "https://raw.githubusercontent.com/llgjermeni/IR-Template/master/scripts/gatewayInstall.ps1"
   },
   "resources": [
     {
