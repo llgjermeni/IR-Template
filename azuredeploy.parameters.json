@@ -9,7 +9,7 @@
         "value":"freelancer"
       },
       "existingDataFactoryResourceGroup": {
-        "value":"East US"
+        "value":"freelancer-rg"
       },
       "existingDataFactoryVersion": {
         "value":"V2"
