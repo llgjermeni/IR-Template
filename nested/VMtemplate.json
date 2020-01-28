@@ -39,35 +39,6 @@
       //   }
       // },
       {
-        "apiVersion": "2016-03-30",
-        "type": "Microsoft.Network/networkInterfaces",
-        "name": "[variables('nicName')]",
-        "location": "[parameters('existingVnetLocation')]",
-        "dependsOn": [
-          // "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
-        ],
-        "properties": {
-          "ipConfigurations": [
-            {
-              "name": "ipconfig1",
-              "properties": {
-                "privateIPAllocationMethod": "Static",
-                "privateIPAddress": "192.169.5.8",
-                // "publicIPAddress": {
-                //   "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
-                // },
-                "subnet": {
-                  "id": "[parameters('subnetId')]"
-                }
-              }
-            }
-          ],
-          "networkSecurityGroup": {
-            "id": "[parameters('nsgId')]"
-          }
-        }
-      },
-      {
         "apiVersion": "2017-03-30", 
         "type": "Microsoft.Compute/virtualMachines",
         "name": "[parameters('virtualMachineName')]",
@@ -110,6 +81,35 @@
               "enabled": true,
               "storageUri": "[concat('https://', parameters('storageAccountName'), '.blob.core.windows.net/')]"
             }
+          }
+        }
+      },
+      {
+        "apiVersion": "2016-03-30",
+        "type": "Microsoft.Network/networkInterfaces",
+        "name": "[variables('nicName')]",
+        "location": "[parameters('existingVnetLocation')]",
+        "dependsOn": [
+          // "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
+        ],
+        "properties": {
+          "ipConfigurations": [
+            {
+              "name": "ipconfig1",
+              "properties": {
+                "privateIPAllocationMethod": "Static",
+                "privateIPAddress": "192.169.5.8",
+                // "publicIPAddress": {
+                //   "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
+                // },
+                "subnet": {
+                  "id": "[parameters('subnetId')]"
+                }
+              }
+            }
+          ],
+          "networkSecurityGroup": {
+            "id": "[parameters('nsgId')]"
           }
         }
       }
