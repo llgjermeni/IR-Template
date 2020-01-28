@@ -25,7 +25,7 @@
       }
     },
     "variables": {
-      "nicName": "[concat(parameters('virtualMachineName'), 'Nic')]"
+      "nicName": "[concat(parameters('virtualMachineName'), 'TestNic')]"
       // "publicIPAddressName": "[concat(parameters('virtualMachineName'), '-ip')]"
     },
     "resources": [
