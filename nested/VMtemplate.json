@@ -11,9 +11,9 @@
       "adminPassword": {
         "type": "securestring"
       },
-      "existingVnetLocation": {
-        "type": "string"
-      },
+      // "existingVnetLocation": {
+      //   "type": "string"
+      // },
       "subnetId": {
         "type": "string"
       },
