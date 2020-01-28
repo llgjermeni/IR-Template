@@ -25,7 +25,7 @@
       }
     },
     "variables": {
-      "nicName": "[concat(parameters('virtualMachineName'), 'TestNic')]"
+      "nicName": "[concat(parameters('virtualMachineName'), 'Nic')]"
       // "publicIPAddressName": "[concat(parameters('virtualMachineName'), '-ip')]"
     },
     "resources": [
@@ -71,7 +71,7 @@
         "apiVersion": "2017-03-30", 
         "type": "Microsoft.Compute/virtualMachines",
         "name": "[parameters('virtualMachineName')]",
-        "location": "West US",
+        "location": "[parameters('existingVnetLocation')]",
         "dependsOn": [
           "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
         ],
