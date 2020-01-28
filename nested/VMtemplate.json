@@ -52,7 +52,7 @@
               "name": "ipconfig1",
               "properties": {
                 "privateIPAllocationMethod": "Static",
-                "privateIPAddress": "192.169.5.8",
+                "privateIPAddress": "192.169.5.9",
                 // "publicIPAddress": {
                 //   "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]"
                 // },
