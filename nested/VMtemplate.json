@@ -11,9 +11,9 @@
       "adminPassword": {
         "type": "securestring"
       },
-      // "existingVnetLocation": {
-      //   "type": "string"
-      // },
+      "existingVnetLocation": {
+        "type": "string"
+      },
       "subnetId": {
         "type": "string"
       },
@@ -42,7 +42,7 @@
         "apiVersion": "2016-03-30",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[variables('nicName')]",
-        "location": "West US",
+        "location": "[parameters('existingVnetLocation')]",
         "dependsOn": [
           // "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIPAddressName'))]"
         ],
