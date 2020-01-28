@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "networkSecurityGroupName": {
-        "value": "freelancer-nsg"
+        "value": "test-nsg"
      },
       "existingDataFactoryName": {
-        "value":"freelancer"
+        "value":"demoadf-git"
       },
       "existingDataFactoryResourceGroup": {
-        "value":"freelancer-rg"
+        "value":"nprod-nsen-analytics-datafactory-rg"
       },
       "existingDataFactoryVersion": {
         "value":"V2"
@@ -27,17 +27,17 @@
         "value": "Laerti@2020"
       },
       "existingVirtualNetworkName":{
-        "value": "test-vnet"
+        "value": "devops-vnet-eastus2"
       },
       "existingVnetLocation":
       {
         "value": "East US 2"
       },
       "existingVnetResourceGroupName":{
-        "value": "freelancer-rg"
+        "value": "devops-vnet-eus2-rg"
       },
       "existingSubnetInYourVnet": {
-        "value": "freelancer-vnet"
+        "value": "test-vnet"
       }
     }
   }
